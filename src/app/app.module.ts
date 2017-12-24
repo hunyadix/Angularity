@@ -1,14 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
+import { HttpClientModule } from '@angular/common/http'
+import { RouterModule } from '@angular/router'
+
+import { AppComponent } from './app.component'
+import { GuideComponent } from './guide/guide.component';
+import { AboutComponent } from './about/about.component'
 
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: "tips", component: GuideComponent },
+      { path: "about", component: AboutComponent }
+    ])
+  ],
+  declarations: [
+    AppComponent,
+    GuideComponent,
+    AboutComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
