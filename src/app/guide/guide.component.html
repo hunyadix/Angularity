@@ -1,0 +1,13 @@
+<div>
+	<h1>{{ title }}</h1>
+	<div class="table-responsive">
+		<table class="table" *ngIf="tips && tips.length">
+			<tr *ngFor="let tip of tips">
+				<td>{{ tip.title }}</td>
+				<td>{{ tip.body }}</td>
+				<td>{{ tip.imageUrl }}</td>
+			</tr>
+		</table>
+	</div>
+	This is a guide component placeholder.
+</div>
